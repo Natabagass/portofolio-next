@@ -8,11 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        jakartaSans: 'Plus Jakarta Sans'
       },
+      boxShadow: {
+        background: '0px 0px 40px rgb(197, 173, 197)',
+      },
+      colors: {
+        sunsetOrange: '#FF5841',
+        redViolet: '#C53678',
+        darkClassicBlue: '#0A1828',
+        turqoise: '#178582',
+        gold: '#BFA181',
+        pastelPurple: '#C5ADC5'
+      }
     },
   },
   plugins: [],
