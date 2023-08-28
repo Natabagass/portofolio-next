@@ -2,11 +2,20 @@
 import Image from "next/image";
 import img from "@/img/2.jpg"
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="flex flex-col w-full justify-center items-center h-screen mt-10">
-            <div className="relative w-[300px] h-[300px]">
+        <div className="flex flex-col w-full justify-center items-center h-screen">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: [0, 0.71, 0.2, 1.01]
+                }}
+                className="relative w-[300px] h-[300px]">
                 <Image
                     src={img}
                     alt="Char"
@@ -14,13 +23,45 @@ const Hero = () => {
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
-            </div>
-            <div className="text-white mt-8 w-full flex justify-center flex-col items-center">
-                <h3 className="font-medium flex text-left">Hello there!</h3>
-                <h1 className="text-2xl my-5 font-semibold">My name is <span className="font-bold text-5xl text-redViolet">Bagas Meganata</span></h1>
-                <p className="text-center text-xl w-[30%]">
+            </motion.div>
+            <div className="text-white w-full flex justify-center mt-8 flex-col items-center">
+                <motion.h3
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ ease: 'easeOut', duration: 0.8, delay: 0.8 }}
+                    className="font-medium flex text-left">Hello there!</motion.h3>
+                <motion.h1
+                    initial={{ opacity: 0, scale: 0.5, }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1.1 }}
+                    className="text-2xl mb-10 mt-5 font-semibold items-end flex flex-row">I&#39;m&nbsp;
+                    <div className="text-6xl text-redViolet">
+                        <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter.pauseFor(2000)
+                                    .typeString('Bagas Meganata')
+                                    .changeDeleteSpeed(50)
+                                    .pauseFor(2000)
+                                    .deleteChars(14)
+                                    .typeString('Frontend Developer')
+                                    .changeDeleteSpeed(50)
+                                    .pauseFor(2000)
+                                    .start();
+                            }}
+                            options={{
+                                loop: true,
+                                deleteSpeed: 200,
+                            }}
+                        />
+                    </div>
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1.4 }}
+                    className="text-center text-xl w-[30%]">
                     A human who likes <b>Frontend Development</b> using <i>React</i> and <i>Next</i> for the framework. Loves about <i>blockchain</i> technology and still learn more about <i>solidity</i>.
-                </p>
+                </motion.p>
             </div>
         </div>
     );

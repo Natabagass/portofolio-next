@@ -1,4 +1,6 @@
 "use client";
+import { HoverUnderline } from "@/features/underline";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -19,32 +21,44 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`${isScrolled ? 'bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg' : 'bg-white' } text-gold z-10 transition-all duration-150 top-0 fixed shadow-xl mt-5 font-jakartaSans font-semibold w-[50%] rounded-full items-center flex justify-center`}>
+        <motion.div 
+        initial={{ y: -100, opacity: 0.5 }}
+        animate={{ y: 10, opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 0.5, delay: 0.2 }}
+            className={`${isScrolled ? 'bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg' : 'bg-white'} text-gold z-10 transition-all duration-300 top-0 fixed shadow-xl mt-5 font-jakartaSans font-semibold w-[50%] rounded-full items-center flex justify-center`}>
             <div className={`w-full rounded-full transition-all duration-500`}>
                 <ul className="items-center w-full flex justify-around px-2 py-3">
                     <li>
-                        <Link href="#hero">
-                            Hero
-                        </Link>
+                        <HoverUnderline>
+                            <Link href="#hero">
+                                Hero
+                            </Link>
+                        </HoverUnderline>
                     </li>
                     <li>
-                        <Link href="#about">
-                            About
-                        </Link>
+                        <HoverUnderline>
+                            <Link href="#about">
+                                About
+                            </Link>
+                        </HoverUnderline>
                     </li>
                     <li>
-                        <Link href="#techStack">
-                            Technology
-                        </Link>
+                        <HoverUnderline>
+                            <Link href="#techStack">
+                                Technology
+                            </Link>
+                        </HoverUnderline>
                     </li>
                     <li>
-                        <Link href="#project">
-                            Project
-                        </Link>
+                        <HoverUnderline>
+                            <Link href="#project">
+                                Project
+                            </Link>
+                        </HoverUnderline>
                     </li>
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
