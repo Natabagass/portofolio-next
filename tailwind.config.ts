@@ -13,6 +13,7 @@ const config: Config = {
       },
       boxShadow: {
         background: '0px 0px 40px rgb(197, 173, 197)',
+        button: '0px 4px 24px 0px rgba(29, 93, 155, 0.4)'
       },
       colors: {
         sunsetOrange: '#FF5841',
