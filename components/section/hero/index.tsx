@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="flex flex-col w-full justify-center items-center h-screen">
+        <div className="flex flex-col w-full justify-center items-center h-screen mt-10">
             <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -43,7 +43,7 @@ const Hero = () => {
                                     .changeDeleteSpeed(50)
                                     .pauseFor(2000)
                                     .deleteChars(14)
-                                    .typeString('Frontend Developer')
+                                    .typeString('a Frontend Developer')
                                     .changeDeleteSpeed(50)
                                     .pauseFor(2000)
                                     .start();

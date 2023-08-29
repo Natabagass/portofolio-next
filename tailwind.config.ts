@@ -16,12 +16,19 @@ const config: Config = {
       },
       colors: {
         sunsetOrange: '#FF5841',
-        redViolet: '#C53678',
+        redViolet: '#FC51A1',
+        darkViolet: '#C53678',
         darkClassicBlue: '#0A1828',
         turqoise: '#178582',
         gold: '#BFA181',
         pastelPurple: '#C5ADC5'
-      }
+      },
+      margin: {
+        content: '100px',
+      },
+      screens: {
+        mobile: '450px'
+      },
     },
   },
   plugins: [],
