@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import img from "@/img/Saly-19.png"
+import img from "@/img/Saly-19.svg"
 import { motion } from "framer-motion";
 
 const About = () => {
