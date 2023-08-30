@@ -30,7 +30,7 @@ const Navbar = () => {
                 <ul className="items-center w-full flex justify-around px-2 py-3">
                     <li>
                         <HoverUnderline>
-                            <Link href="#home">
+                            <Link href="/">
                                 Home
                             </Link>
                         </HoverUnderline>

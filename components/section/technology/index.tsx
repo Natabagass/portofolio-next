@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Technology = () => {
     return (
-        <div className="mx-content font-jakartaSans mt-60">
+        <div className="mx-content font-jakartaSans mt-80">
             <div className="flex flex-col w-full">
                 <motion.div
                     initial={{ y: -50, opacity: 0 }}
@@ -24,26 +24,19 @@ const Technology = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ x: -100, opacity: 0 }}
+                    initial={{ x: -50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.6 }}
+                    transition={{ duration: 1.5, delay: 0.3 }}
                     className="w-full grid grid-cols-4 bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-2 rounded-3xl mt-5">
                     {
                         data.map((datas, index) => {
                             return (
-                                <motion.div
+                                <Cards
                                     key={index}
-                                    initial={{ y: -100, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 1, delay: 0.6 }}
-                                >
-                                    <Cards
-                                        name={datas.name}
-                                        logo={datas.logo}
-                                    />
-                                </motion.div>
+                                    name={datas.name}
+                                    logo={datas.logo}
+                                />
                             )
                         })
                     }

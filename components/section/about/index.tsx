@@ -17,7 +17,7 @@ const About = () => {
             </motion.span>
             <div className="flex flex-row w-full justify-between mt-10 items-center">
                 <motion.div
-                    initial={{ x: -100, opacity: 0 }}
+                    initial={{ x: -50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.6 }}
@@ -34,7 +34,7 @@ const About = () => {
                     </motion.div>
                 </motion.div>
                 <motion.div
-                    initial={{ x: 100, opacity: 0 }}
+                    initial={{ x: 50, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.6 }}

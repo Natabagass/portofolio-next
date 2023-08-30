@@ -19,7 +19,7 @@ const Cards = (props: Props) => {
                 onMouseLeave={() => setIsHover(false)}
                 animate={isHover ? { scale: 1.1 } : { scale: 1 }}
                 className="flex flex-col items-center px-1 py-6">
-                <div className="relative w-[150px] h-[150px]">
+                <div className="relative w-[125px] h-[125px]">
                     <Image
                         src={props.logo}
                         alt="Logo"
@@ -27,7 +27,12 @@ const Cards = (props: Props) => {
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
                     />
                 </div>
-                <h1 className="text-white text-lg">{props.name}</h1>
+                <motion.h1
+                    initial={{ y: -50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, delay: 0.6 }}
+                    className="text-white text-lg">{props.name}</motion.h1>
             </motion.div>
         </div>
     );
