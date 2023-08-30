@@ -22,7 +22,9 @@ const config: Config = {
         darkClassicBlue: '#0A1828',
         turqoise: '#178582',
         gold: '#BFA181',
-        pastelPurple: '#C5ADC5'
+        lightGold: '#FFD7AB',
+        pastelPurple: '#BDA3BD',
+        greenLight: '#40f4b2'
       },
       margin: {
         content: '100px',

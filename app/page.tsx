@@ -17,14 +17,25 @@ export default function Home() {
         </section>
 
         <section id='about' className='scroll-mt-64'>
+          <div className="flex justify-start absolute w-full -z-0">
+            <div className="w-[700px] h-[300px] blur-[200px] ml-36 -mt-10 rounded-full bg-turqoise" />
+          </div>
           <About />
         </section>
 
-        <section id='techStack' className='scroll-mt-20'>
+        <section id='techStack' className='scroll-mt-32'>
+          <div className="flex justify-end absolute w-full -z-0">
+            <div className="w-[700px] h-[400px] blur-[200px] mr-36 mt-36 rounded-full bg-pastelPurple" />
+          </div>
           <Technology />
         </section>
 
-        <section id='project'>
+        <section id='project' className='scroll-mt-32'>
+          <div className="flex flex-col items-end justify-end absolute w-full -z-0">
+            <div className="w-[700px] h-[400px] blur-[200px] mr-36 mt-72 rounded-full bg-gold" />
+            <div className="w-[700px] h-[300px] blur-[200px] mt-56 rounded-full bg-turqoise" />
+            <div className="w-[700px] h-[300px] blur-[200px] mr-80 mt-56 rounded-full bg-pastelPurple" />
+          </div>
           <Project />
         </section>
 
