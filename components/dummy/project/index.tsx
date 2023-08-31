@@ -16,7 +16,7 @@ export const data = [
                 logo: 'img/framer.svg'
             },
         ],
-        deploy: 'www.venuus.id',
+        deploy: 'https://venuus.id/',
         github: ''
     },
     {

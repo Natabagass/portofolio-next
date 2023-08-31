@@ -21,8 +21,7 @@ export default function RootLayout({
       <Head>
         <link rel='icon' href='/icon/icons.png'></link>
       </Head>
-      <body className='bg-darkClassicBlue'>
-        <link rel="icon" href="/icon/icons.png" sizes="any" />
+      <body className='bg-darkClassicBlue max-w-screen-2xl mx-auto'>
         <nav className='w-full flex items-center justify-center max-w-screen-2xl mx-auto'>
           <Navbar />
         </nav>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="flex flex-col w-full justify-center items-center h-screen mt-10">
+        <div className="flex flex-col w-full justify-center items-center h-screen mt-10 ">
             <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -15,7 +15,7 @@ const Hero = () => {
                     delay: 0.5,
                     ease: [0, 0.71, 0.2, 1.01]
                 }}
-                className="relative w-[300px] h-[300px]">
+                className="relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
                 <Image
                     src={img}
                     alt="Char"
@@ -34,8 +34,8 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.5, }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ ease: 'easeOut', duration: 0.8, delay: 1.1 }}
-                    className="text-2xl mb-10 mt-5 font-semibold items-end flex flex-row">I&#39;m&nbsp;
-                    <div className="text-6xl text-redViolet">
+                    className="text-2xl mb-5 lg:mb-10 mt-5 font-semibold items-end flex flex-row">I&#39;m&nbsp;
+                    <div className="text-3xl sm:text-5xl lg:text-6xl text-center text-redViolet">
                         <Typewriter
                             onInit={(typewriter) => {
                                 typewriter.pauseFor(2000)
@@ -59,7 +59,7 @@ const Hero = () => {
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ ease: 'easeOut', duration: 0.8, delay: 1.4 }}
-                    className="text-center text-xl w-[30%]">
+                    className="text-center text-lg lg:text-xl w-[85%] sm:w-[70%] lg:w-[50%] xl:w-[30%]">
                     A human who likes <b>Frontend Development</b> using <i>React</i> and <i>Next</i> for the framework. Loves about <i>blockchain</i> technology and still learn more about <i>solidity</i>.
                 </motion.p>
             </div>

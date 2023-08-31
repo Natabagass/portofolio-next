@@ -29,6 +29,8 @@ const config: Config = {
       },
       margin: {
         content: '100px',
+        tablet: '50px',
+        mobile: '20px'
       },
       screens: {
         mobile: '450px'
