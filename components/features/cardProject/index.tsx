@@ -16,10 +16,10 @@ interface Props {
 const CardProject = (props: Props) => {
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ ease: 'easeOut', duration: 0.6, delay: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
                 <h1 className="text-4xl font-bold text-redViolet">{props.nama}</h1>

@@ -18,6 +18,7 @@ const config: Config = {
       colors: {
         sunsetOrange: '#FF5841',
         redViolet: '#FC51A1',
+        violet: '#E13B89',
         darkViolet: '#C53678',
         darkClassicBlue: '#0A1828',
         turqoise: '#178582',
