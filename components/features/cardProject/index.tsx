@@ -32,7 +32,7 @@ const CardProject = (props: Props) => {
                                     <div className="absolute h-[10px] w-[10px] animate-ping rounded-full bg-greenLight" />
                                     <div className="h-[10px] w-[10px] rounded-full bg-greenLight" />
                                 </div>
-                                <h3 className="text-greenLight rounded-xl text-lg sm:text-2xl font-medium flex items-center flex-row">Live in production</h3>
+                                <h3 className="text-greenLight rounded-xl text-base mobile:text-lg sm:text-2xl font-medium flex items-center flex-row">Live in production</h3>
                             </div>
                             <h1 className="text-white text-2xl mobile:text-3xl lg:text-4xl font-bold mt-3">{props.nama}</h1>
                         </div>

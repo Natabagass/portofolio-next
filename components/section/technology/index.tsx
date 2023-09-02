@@ -21,7 +21,11 @@ const Technology = () => {
                     </h3>
                 </div>
 
-                <div className="w-full grid grid-cols-2 sm:grid-cols-4 bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-2 rounded-3xl mt-5">
+                <div
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                    data-aos-delay="700"
+                    className="w-full grid grid-cols-2 sm:grid-cols-4 bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-2 rounded-3xl mt-5">
                     {
                         data.map((datas, index) => {
                             return (
