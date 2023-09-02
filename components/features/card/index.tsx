@@ -1,7 +1,8 @@
 "use client"
-import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface Props {
     name: string,
@@ -9,6 +10,9 @@ interface Props {
 }
 
 const Cards = (props: Props) => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     const [isHover, setIsHover] = useState<boolean>(false)
 
     return (
@@ -17,12 +21,7 @@ const Cards = (props: Props) => {
             data-aos-duration="1500"
             data-aos-delay="700"
             className="flex flex-row w-full justify-center font-jakartaSans">
-            <motion.div
-                layout
-                onMouseEnter={() => setIsHover(true)}
-                onMouseLeave={() => setIsHover(false)}
-                animate={isHover ? { scale: 1.1 } : { scale: 1 }}
-                className="flex flex-col items-center px-1 py-6">
+            <div className="flex flex-col scale-100 hover:scale-110 items-center px-1 py-6">
                 <div className="relative w-[125px] h-[125px]">
                     <Image
                         src={props.logo}
@@ -31,13 +30,9 @@ const Cards = (props: Props) => {
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
                     />
                 </div>
-                <motion.h1
-                    initial={{ y: -50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.6 }}
-                    className="text-white text-lg">{props.name}</motion.h1>
-            </motion.div>
+                <h1
+                    className="text-white text-lg">{props.name}</h1>
+            </div>
         </div>
     );
 }

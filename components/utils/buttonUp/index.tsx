@@ -1,8 +1,13 @@
 "use client"
-import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const ButtonUp = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     const topPage = () => {
         window.scrollTo({
             top: 0,
@@ -12,15 +17,13 @@ const ButtonUp = () => {
 
     return (
         <>
-            <motion.button
-                initial={{ y: -20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.6 }}
+            <button
+                data-aos="fade-up"
+                data-aos-duration="1000"
                 onClick={topPage}
                 className='fixed right-4 sm:right-16 lg:right-10 bottom-12 bg-neutral-200 rounded-xl z-50 shadow-button'>
                 <MdKeyboardDoubleArrowUp className='text-4xl text-turqoise' />
-            </motion.button>
+            </button>
         </>
     );
 }

@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { FiArrowUpRight } from "react-icons/fi"
 import { FaGithub } from "react-icons/fa"
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 interface Props {
     nama: string,
@@ -14,10 +16,13 @@ interface Props {
 }
 
 const CardProject = (props: Props) => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div
-            data-aos="zoom-in"
-            data-aos-duration="1500"
+            data-aos="fade-right"
+            data-aos-duration="1000"
             data-aos-delay="700"
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
@@ -36,11 +41,9 @@ const CardProject = (props: Props) => {
                             </div>
                             <h1 className="text-white text-2xl mobile:text-3xl lg:text-4xl font-bold mt-3">{props.nama}</h1>
                         </div>
-                        <motion.div
-                            whileHover={{ scale: 1.2 }}
-                            className="bg-black p-2 sm:p-3 items-center rounded-lg shadow-xl">
+                        <div className="bg-black p-2 sm:p-3 items-center rounded-lg shadow-xl hover:scale-110 scale-100">
                             <FiArrowUpRight className="text-2xl text-white" />
-                        </motion.div>
+                        </div>
                     </div>
                 </Link>
 

@@ -1,9 +1,14 @@
 "use client"
 import { data } from "@/dummy/technology";
 import Cards from "@/features/card";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Technology = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div className="mx-mobile sm:mx-tablet lg:mx-content  font-jakartaSans mt-32 lg:mt-60">
             <div className="flex flex-col w-full">

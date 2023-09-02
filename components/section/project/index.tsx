@@ -1,9 +1,14 @@
 "use client"
 import { data } from "@/dummy/project";
 import CardProject from "@/features/cardProject";
-import { motion } from "framer-motion";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Project = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div className="mx-mobile sm:mx-tablet lg:mx-content font-jakartaSans mt-32 lg:mt-80">
             <div className="flex flex-col w-full">

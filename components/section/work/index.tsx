@@ -1,9 +1,14 @@
 "use client"
 import { data } from "@/dummy/work";
 import CardWork from "@/features/cardWork";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Work = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div className="mx-mobile sm:mx-tablet lg:mx-content font-jakartaSans mt-32 lg:mt-80 z-20">
             <div className="flex flex-col w-full z-20">

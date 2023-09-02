@@ -1,6 +1,5 @@
 "use client";
 import { HoverUnderline } from "@/features/underline";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -21,10 +20,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <motion.div 
-        initial={{ y: -100, opacity: 0.5 }}
-        animate={{ y: 10, opacity: 1 }}
-        transition={{ ease: 'easeOut', duration: 1, delay: 0.2 }}
+        <div 
             className={`${isScrolled ? 'bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg text-lightGold' : 'bg-white text-gold'} z-10 transition-all duration-300 top-0 fixed mt-5 font-jakartaSans font-semibold w-[95%] lg:w-[50%] rounded-full items-center flex justify-center`}>
             <div className={`w-full rounded-full transition-all duration-500`}>
                 <ul className="items-center w-full flex justify-around px-2 py-3">
@@ -65,7 +61,7 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
