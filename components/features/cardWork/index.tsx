@@ -13,11 +13,10 @@ interface Props {
 
 const CardWork = (props: Props) => {
     return (
-        <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+        <div
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            data-aos-delay="700"
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
                 <div className="flex flex-col md:flex-row w-full items-center">
@@ -58,7 +57,7 @@ const CardWork = (props: Props) => {
                     }
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

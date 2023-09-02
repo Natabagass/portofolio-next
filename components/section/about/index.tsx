@@ -7,19 +7,18 @@ const About = () => {
     return (
         <div className="mx-mobile sm:mx-tablet lg:mx-content font-jakartaSans text-white lg:mt-48">
             <span className="relative mt-2 inline-block sm:mt-0">
-                <h1 className="text-redViolet text-4xl sm:text-5xl lg:text-6xl font-semibold z-20 flex flex-row"><motion.span 
-                    initial={{ y: 50, x: -50, opacity: 0 }}
-                    whileInView={{ x: 0, y: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.3 }}>😀</motion.span>About</h1>
+                <h1 className="text-redViolet text-4xl sm:text-5xl lg:text-6xl font-semibold z-20 flex flex-row">
+                    <span
+                        data-aos="fade-up-right"
+                        data-aos-duration="1000"
+                    >😀</span>About</h1>
                 <span className="title-highlight sm:flex absolute left-[60px] lg:left-[75px] -bottom-1 -z-10 hidden h-[15px] w-[150px] sm:-bottom-1 lg:bottom-1 lg:h-[10px] lg:w-[180px]"></span>
             </span>
             <div className="flex flex-row w-full justify-between mt-10 items-center">
-                <motion.div
-                    initial={{ x: -50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 1 }}
+                <div
+                    data-aos="zoom-in-right"
+                    data-aos-duration="1500"
+                    data-aos-delay="700"
                     className="relative flex lg:w-[85%] xl:w-full">
                     <motion.div
                         whileHover={{ scale: 1.03 }}
@@ -31,12 +30,11 @@ const About = () => {
                             </p>
                         </div>
                     </motion.div>
-                </motion.div>
-                <motion.div
-                    initial={{ x: 50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 1 }}
+                </div>
+                <div
+                    data-aos="zoom-in-left"
+                    data-aos-duration="1500"
+                    data-aos-delay="700"
                     className="hidden lg:flex w-full justify-end items-center -mt-48">
                     <div className="absolute w-[500px] h-[500px]">
                         <Image
@@ -45,7 +43,7 @@ const About = () => {
                             src={img}
                             alt="Gambar Ilus" />
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );

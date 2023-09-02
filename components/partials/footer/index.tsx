@@ -49,8 +49,8 @@ const Footer = () => {
                                 />
                             </div>
                             <div className='flex flex-col'>
-                                <Link target="_blank" href={'https://www.linkedin.com/in/natabagass/'} className='flex flex-row text-lightGold font-medium items-center text-base mobile:text-lg sm:text-xl'><BiLogoLinkedin className="mr-3" /> Bagas Meganata</Link>
-                                <Link target="_blank" href={'mailto:meganatabagas@gmail.com'} className='flex flex-row text-lightGold font-medium items-center text-base mobile:text-lg sm:text-xl'><BiLogoGmail className="mr-3" /> meganatabagas@gmail.com</Link>
+                                <Link target="_blank" href={'https://www.linkedin.com/in/natabagass/'} className='flex flex-row text-lightGold font-medium items-center text-sm mobile:text-lg sm:text-xl'><BiLogoLinkedin className="mr-3" /> Bagas Meganata</Link>
+                                <Link target="_blank" href={'mailto:meganatabagas@gmail.com'} className='flex flex-row text-lightGold font-medium items-center text-sm mobile:text-lg sm:text-xl'><BiLogoGmail className="mr-3" /> meganatabagas@gmail.com</Link>
                             </div>
                         </div>
                     </motion.div>

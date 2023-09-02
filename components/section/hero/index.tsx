@@ -3,18 +3,19 @@ import Image from "next/image";
 import img from "@/img/2.jpg"
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <div className="flex flex-col w-full justify-center items-center h-screen mt-10 ">
-            <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{
-                    duration: 0.8,
-                    delay: 0.5,
-                    ease: [0, 0.71, 0.2, 1.01]
-                }}
+            <div
+                data-aos="zoom-in"
+                data-aos-duration="1000"
                 className="relative w-[200px] h-[200px] lg:w-[300px] lg:h-[300px]">
                 <Image
                     src={img}
@@ -23,22 +24,22 @@ const Hero = () => {
                     fill
                     style={{ objectFit: 'cover', objectPosition: 'center' }}
                 />
-            </motion.div>
+            </div>
             <div className="text-white w-full flex justify-center mt-8 flex-col items-center">
-                <motion.h3
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ ease: 'easeOut', duration: 0.8, delay: 0.8 }}
-                    className="font-medium flex text-left">Hello there!</motion.h3>
-                <motion.h1
-                    initial={{ opacity: 0, scale: 0.5, }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1.1 }}
+                <h3
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="500"
+                    className="font-medium flex text-left">Hello there!</h3>
+                <h1
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="1500"
                     className="text-2xl mb-5 lg:mb-10 mt-5 font-semibold items-end flex flex-row">I&#39;m&nbsp;
                     <div className="text-3xl sm:text-5xl lg:text-6xl text-center text-redViolet">
                         <Typewriter
                             onInit={(typewriter) => {
-                                typewriter.pauseFor(2000)
+                                typewriter.pauseFor(2500)
                                     .typeString('Bagas Meganata')
                                     .changeDeleteSpeed(50)
                                     .pauseFor(2000)
@@ -54,14 +55,14 @@ const Hero = () => {
                             }}
                         />
                     </div>
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ ease: 'easeOut', duration: 0.8, delay: 1.4 }}
+                </h1>
+                <p
+                    data-aos="zoom-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="2000"
                     className="text-center text-lg lg:text-xl w-[85%] sm:w-[70%] lg:w-[50%] xl:w-[30%]">
                     A human who likes <b>Frontend Development</b> using <i>React</i> and <i>Next</i> for the framework. Loves about <i>blockchain</i> technology and still learn more about <i>solidity</i>.
-                </motion.p>
+                </p>
             </div>
         </div>
     );

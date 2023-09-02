@@ -12,7 +12,11 @@ const Cards = (props: Props) => {
     const [isHover, setIsHover] = useState<boolean>(false)
 
     return (
-        <div className="flex flex-row w-full justify-center font-jakartaSans">
+        <div
+            data-aos="zoom-in-right"
+            data-aos-duration="1500"
+            data-aos-delay="700"
+            className="flex flex-row w-full justify-center font-jakartaSans">
             <motion.div
                 layout
                 onMouseEnter={() => setIsHover(true)}

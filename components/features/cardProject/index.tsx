@@ -15,11 +15,10 @@ interface Props {
 
 const CardProject = (props: Props) => {
     return (
-        <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+        <div
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+            data-aos-delay="700"
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-bold text-redViolet">{props.nama}</h1>
@@ -39,7 +38,7 @@ const CardProject = (props: Props) => {
                         </div>
                         <motion.div
                             whileHover={{ scale: 1.2 }}
-                            className="bg-black p-3 items-center rounded-lg shadow-xl">
+                            className="bg-black p-2 sm:p-3 items-center rounded-lg shadow-xl">
                             <FiArrowUpRight className="text-2xl text-white" />
                         </motion.div>
                     </div>
@@ -76,7 +75,7 @@ const CardProject = (props: Props) => {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

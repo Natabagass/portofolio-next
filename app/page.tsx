@@ -6,6 +6,7 @@ import Work from '@/section/work'
 import ButtonUp from '@/utils/buttonUp'
 import Image from 'next/image'
 
+
 export default function Home() {
   return (
     <main>
