@@ -26,9 +26,6 @@ const Work = () => {
             </div>
 
             <div
-                data-aos="fade-up"
-                data-aos-delay="500"
-                data-aos-duration="1000"
                 className="z-20">
                 {
                     data.map((datas, index) => {

@@ -1,7 +1,7 @@
 export const data = [
     {
         name: 'Torche Education',
-        img: '/img/softease.jpg',
+        img: '/img/torche.jpg',
         desc: 'Torche Education is a Startup Technology that help you learn in the field of engineering, especially in the field of Chemical Engineering.',
         role: 'Frontend Engineer Intern',
         duration: 'Nov 2022 - Feb 2023 · 4 mos',
@@ -18,7 +18,7 @@ export const data = [
         name: 'SoftEase Studio',
         desc: 'SoftEase Studio is a multi-platform digital studio capable of facilitating all business digital needs.',
         role: 'Frontend Developer',
-        img: '/img/torche.jpg',
+        img: '/img/softease.jpg',
         duration: 'Apr 2023 - Present',
         responsibilites: [
             {
