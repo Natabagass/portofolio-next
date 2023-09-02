@@ -1,8 +1,6 @@
 "use client"
 import Image from "next/image";
 import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 interface Props {
     name: string,
@@ -14,14 +12,8 @@ interface Props {
 }
 
 const CardWork = (props: Props) => {
-    useEffect(() => {
-        AOS.init();
-    }, [])
     return (
         <div
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-delay="700"
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
                 <div className="flex flex-col md:flex-row w-full items-center">

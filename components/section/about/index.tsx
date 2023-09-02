@@ -21,12 +21,9 @@ const About = () => {
             </span>
             <div className="flex flex-row w-full justify-between mt-10 items-center">
                 <div
-                    data-aos="zoom-in-right"
-                    data-aos-duration="1500"
-                    data-aos-delay="700"
                     className="relative flex lg:w-[85%] xl:w-full">
                     <div
-                        className="flex flex-col lg:mx-0 mx-auto rounded-3xl scale-100 hover:scale-110">
+                        className="flex flex-col lg:mx-0 mx-auto rounded-3xl scale-100 hover:scale-105">
                         <div className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 rounded-3xl w-full flex h-fit">
                             <p className="text-lg sm:text-xl text-justify">
                                 Hello, my name is <b>Bagas Meganata</b>. I am third year Technology Information student at Brawijaya University. I&#39;m currently a part of BCC in Frontend Department division.
@@ -36,9 +33,6 @@ const About = () => {
                     </div>
                 </div>
                 <div
-                    data-aos="zoom-in-left"
-                    data-aos-duration="1500"
-                    data-aos-delay="700"
                     className="hidden lg:flex w-full justify-end items-center -mt-48">
                     <div className="absolute w-[500px] h-[500px]">
                         <Image

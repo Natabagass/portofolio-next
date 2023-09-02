@@ -25,7 +25,11 @@ const Work = () => {
                     I previously worked as a freelancer and also as an intern for a company in the web development division as a frontend developer</h3>
             </div>
 
-            <div className="z-20">
+            <div
+                data-aos="fade-up"
+                data-aos-delay="500"
+                data-aos-duration="1000"
+                className="z-20">
                 {
                     data.map((datas, index) => {
                         return (

@@ -21,9 +21,6 @@ const CardProject = (props: Props) => {
     }, [])
     return (
         <div
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            data-aos-delay="700"
             className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
             <div className="flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-bold text-redViolet">{props.nama}</h1>

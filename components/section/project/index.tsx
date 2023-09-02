@@ -25,7 +25,11 @@ const Project = () => {
                     and functionalities in projects.
                 </h3>
 
-                <div>
+                <div
+                    data-aos="fade-up"
+                    data-aos-delay="500"
+                    data-aos-duration="1000"
+                >
                     {
                         data.map((item, index) => {
                             return (
