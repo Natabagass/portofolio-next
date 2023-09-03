@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Cards = (props: Props) => {
-    const [isHover, setIsHover] = useState<boolean>(false)
 
     return (
         <div

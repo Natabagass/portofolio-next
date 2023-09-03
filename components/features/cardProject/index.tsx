@@ -21,7 +21,7 @@ const CardProject = (props: Props) => {
     }, [])
     return (
         <div
-            className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl">
+            className="bg-white bg-opacity-30 backdrop-blur-lg drop-shadow-lg p-6 lg:p-10 mt-10 rounded-3xl min-h-[850px] sm:min-h-[800px] lg:min-h-0">
             <div className="flex flex-col">
                 <h1 className="text-3xl lg:text-4xl font-bold text-redViolet">{props.nama}</h1>
                 <p className="text-lg sm:text-xl text-white font-medium mt-5">{props.desc}</p>

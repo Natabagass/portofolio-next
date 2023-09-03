@@ -2,8 +2,12 @@
 import { data } from "@/dummy/project";
 import CardProject from "@/features/cardProject";
 import AOS from 'aos';
+import 'swiper/css';
+import 'swiper/css/pagination';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Project = () => {
     useEffect(() => {
@@ -25,8 +29,7 @@ const Project = () => {
                     and functionalities in projects.
                 </h3>
 
-                <div
-                >
+                <div className="lg:flex flex-col hidden">
                     {
                         data.map((item, index) => {
                             return (
@@ -42,8 +45,39 @@ const Project = () => {
                         })
                     }
                 </div>
+
+                <div className="lg:hidden flex">
+                    <Swiper
+                    slidesPerView={1}
+                    pagination={{
+                        clickable: true
+                    }}
+                    speed={1000}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    modules={[Pagination, Autoplay]}
+                        className="mySwiper">
+                        {
+                            data.map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <CardProject
+                                            nama={item.nama}
+                                            github={item.github}
+                                            deploy={item.deploy}
+                                            technology={item.technology}
+                                            desc={item.desc}
+                                        />
+                                    </SwiperSlide>
+                                )
+                            })
+                        }
+                    </Swiper>
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
 

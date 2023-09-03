@@ -44,11 +44,11 @@ const CardWork = (props: Props) => {
                 </h2>
                 <div>
                     {
-                        props.responsibilities.map(item => {
+                        props.responsibilities.map((item, index) => {
                             return (
-                                <>
+                                <div key={index}>
                                     <h1 className="text-lg sm:text-xl text-justify lg:text-2xl text-white mt-3"> <span className="mr-3 lg:mr-5">-</span> {item.desc}</h1>
-                                </>
+                                </div>
                             )
                         })
                     }
